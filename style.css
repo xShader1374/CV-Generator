@@ -1,0 +1,15 @@
+body {
+    display: flex;
+}
+
+.main-section {
+    flex: 75%;
+}
+
+.sidebar-section {
+    flex: 25%;
+}
+
+.page-title {
+    text-align: center;
+}
