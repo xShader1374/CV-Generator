@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+    --primary-color: rgb(66, 164, 213);
+    --primary-color-alt: 66 164 213;
+    --bg-darkness: 16;
+    --text-primary-color: rgb(109, 189, 229);
+}
+
 html {
     height: -webkit-fill-available;
 }
@@ -5,16 +14,103 @@ html {
 body {
     display: flex;
     height: -webkit-fill-available;
+    background-color: color-mix(in srgb, var(--primary-color), rgb(var(--bg-darkness), var(--bg-darkness), var(--bg-darkness)) 90%);
+    color: var(--text-primary-color);
+    font-family: 'Poppins';
 }
 
 .main-section {
     flex: 75%;
+    padding: 2%;
+    display: flex;
+    gap: 24px;
+}
+
+.cv-sections-container {
+    flex: 75%;
+    display: flex;
+}
+
+.divisor-section {
+    flex: 0%;
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+    border-color: var(--primary-color);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 400px;
+    box-shadow: 0px 0px 32px 1px var(--primary-color);
+}
+
+.cv-sidebar {
+    flex: 25%;
+    display: flex;
+}
+
+.main-color-colorPicker:hover {
+    cursor: pointer;
+}
+
+.pfp {
+    object-fit: cover;
+    border-radius: 0%;
 }
 
 .sidebar-section {
     flex: 25%;
+    padding: 2%;
+}
+
+.sidebar-footer {
+    margin: 22px 0px 22px 0px;
 }
 
 .page-title {
+    margin-top: 0;
     text-align: center;
 }
+
+.buttons-container-div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    gap: 14px;
+    justify-content: space-evenly;
+}
+
+button {
+    border: none;
+    border-left: 3px var(--primary-color) solid;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    color: var(--text-primary-color);
+    background-color: rgb(var(--primary-color-alt) / 20%);
+    padding: 4px 8px 4px 8px;
+    font-family: 'Poppins';
+    transition: all 0.1s;
+}
+
+button:hover {
+    cursor: pointer;
+    scale: 0.975;
+    box-shadow: 0px 0px 16px 0px rgb(var(--primary-color-alt) / 75%);
+    transition: all 0.1s;
+}
+
+button:active {
+    scale: 0.95;
+    box-shadow: 0px 0px 16px 0px var(--primary-color);
+    transition: all 0.1s;
+}
+
+.generate-button {
+    width: -webkit-fill-available;
+}
+
+@media print {
+    .noPrint {
+        display: none;
+      }
+    }

@@ -1,30 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+  
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV Generator</title>
     <link rel="stylesheet" href="style.css">
   </head>
+  
   <body>
+
     <main class="main-section">
+      
+      <sidebar class="cv-sidebar">
+        
+        <pfpContainer id="pfp-container">
+          <img width="200" height="200" class="pfp" id="pfp" src="https://xsgames.co/randomusers/avatar.php?g=female">
+        </pfpContainer>
+      
+      </sidebar>
+      
+      <div class="divisor-section"></div>
+      
+      <div class="cv-sections-container">
+        
+      </div>
+
+    </main>
+
+    <div class="divisor-section noPrint"></div>
+
+    <sidebar class="sidebar-section noPrint">
+      
       <header>
         <h1 class="page-title">CV Generator</h1>
       </header>
-      <div>
 
-      </div>
-    </main>
-
-    <sidebar class="sidebar-section">
-      <div class="button-container-div">
-        <button>
-          Generate!
+      <main class="sidebar-main-section">
+        
+        Primary Color:
+        <input type="color" class="main-color-colorPicker" id="main-color-colorPicker" value="rgb(66, 164, 213)">
+        <button onclick="resetPrimaryColor()">
+          Reset
         </button>
-      </div>
+        
+        <p>Image Border Radius:</p>
+        <div class="buttons-container-div"></div>
+          square <input type="range" min="0" max="100" value="0" id="pfp-border-radius-slider"> round
+        </div>
+
+      </main>
+
+      <footer class="sidebar-footer">
+
+        <div class="buttons-container-div">
+        
+          <button class="generate-button" hidden>
+            Generate!
+          </button>
+          
+          <button class="generate-button" onclick="printPage()">
+            Print!
+          </button>
+  
+        </div>
+
+      </footer>
+
     </sidebar>
-
-    <footer>
-
-    </footer>
+  
+  <script src="script.js"></script>
   </body>
+  
 </html>
