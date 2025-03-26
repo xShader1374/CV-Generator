@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 :root {
     --primary-color: rgb(66, 164, 213);
@@ -8,15 +9,56 @@
 }
 
 html {
+    scroll-behavior: smooth;
     height: -webkit-fill-available;
+    min-height: fit-content;
 }
 
 body {
+    scroll-behavior: smooth;
     display: flex;
     height: -webkit-fill-available;
     background-color: color-mix(in srgb, var(--primary-color), rgb(var(--bg-darkness), var(--bg-darkness), var(--bg-darkness)) 90%);
     color: var(--text-primary-color);
     font-family: 'Poppins';
+    min-height: min-content;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    align-items: stretch;
+}
+
+.generic-loading-overlay {
+    display: none;
+    position: absolute;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    backdrop-filter: blur(12px);
+    background-color: rgba(0, 0, 0, 0.55);
+    padding: 20%;
+    transition: all .1s;
+    top: 0;
+    left: 0;
+}
+
+.generic-svg {
+    fill: var(--text-primary-color);
+    width: 28px;
+    height: 28px;
+} .location-svg {
+    width: 20px;
+    height: 20px;
+}
+
+.clickable-svg {
+    vertical-align: middle;
+    transition: all .1s;
+} .clickable-svg:hover {
+    scale: 0.95;
+    transition: all .1s;
+} .clickable-svg:active {
+    scale: 0.9;
+    transition: all .1s;
 }
 
 .main-section {
@@ -24,36 +66,328 @@ body {
     padding: 2%;
     display: flex;
     gap: 24px;
+    height: -webkit-fill-available;
+    min-height: fit-content;
+}
+
+.cv-jobs-container {
+    flex: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: flex-start;
+    align-content: stretch;
+    min-height: min-content;
+    gap: 1.5em;
 }
 
 .cv-sections-container {
-    flex: 75%;
+    flex: 100%;
     display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: flex-start;
+    align-content: stretch;
+    min-height: min-content;
+    gap: 1.5em;
 }
 
 .divisor-section {
     flex: 0%;
-    height: -webkit-fill-available;
+    height: auto;
     width: -webkit-fill-available;
     border-color: var(--primary-color);
     border-width: 1px;
     border-style: solid;
     border-radius: 400px;
     box-shadow: 0px 0px 32px 1px var(--primary-color);
+    min-height: -webkit-fill-available;
 }
+
 
 .cv-sidebar {
-    flex: 25%;
+    flex: 0%;
     display: flex;
+    gap: 4px;;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: stretch;
+    justify-content: flex-start;
+    min-height: min-content;
 }
 
-.main-color-colorPicker:hover {
+.personal-info-paragraph {
+    text-wrap-mode: wrap;
+    overflow-wrap: anywhere;
+    color: var(--text-primary-color);
+    display: inline-flex;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+    gap: 14px;
+    width: -webkit-fill-available;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 12px;
+    padding: 16px;
+    border: dashed 2px var(--primary-color);
+    backdrop-filter: blur(12px);
+    background-color: rgb(var(--primary-color-alt) / 20%);
+}
+
+.job-card {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+    border-radius: 12px;
+    padding: 16px 16px 42px 2em;
+    border: dashed 2px var(--primary-color);
+    backdrop-filter: blur(12px);
+    background-color: rgb(var(--primary-color-alt) / 20%);
+}
+
+.company-name {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: center;
+    gap: 0.5em;
+    align-items: flex-start;
+}
+
+.company-name-and-description {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+.job-description {
+	font-size: medium;
+}
+
+.job-title {
+	
+}
+
+.location-container {
+    display: inline-flex;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0 1em 0 1em;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4em;
+    font-size: 0.83em;
+    font-weight: bold;
+}
+
+.job-date {
+    display: inline-flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em 0 1em;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    font-size: 0.83em;
+    font-weight: bold;
+}
+
+.study-vote {
+    display: inline-flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0 1em 0 1em;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    font-size: 0.83em;
+    font-weight: bold;
+}
+
+.signature {
+    align-self: flex-end;
+    font-family: 'Great Vibes';
+    font-size: xxx-large;
+    margin: 0.5em 0.5em 0em 0.5em;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    align-items: center;
+    gap: 8px;
+    
+    border-radius: 12px;
+    padding: 16px;
+    border: dashed 2px var(--primary-color);
+    backdrop-filter: blur(12px);
+    background-color: rgb(var(--primary-color-alt) / 20%);
+}
+
+
+input[type="color" i] {
+    width: -webkit-fill-available;
+} input[type="color" i]:hover {
     cursor: pointer;
 }
 
+
+.slider {
+	-webkit-appearance: none;
+    width: -webkit-fill-available;
+    height: 25px;
+    border-radius: 100px;
+    background: rgb(var(--primary-color-alt) / 0%);
+    outline: none;
+    opacity: 0.9;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    overflow: hidden;
+    box-shadow: 0px 0 1px 4px rgb(var(--primary-color-alt) / 50%);
+    margin: 4px;
+    padding: 4px;
+	-webkit-touch-callout: none; 
+    -webkit-user-select: none;
+    user-select: none;
+} .slider:hover {
+    opacity: 1;
+} .slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 25px;
+	height: 25px;
+	border-radius: 100px;
+	background-color: var(--primary-color);
+	
+    box-shadow: -200px 0 64px 190px rgb(var(--primary-color-alt) / 75%);
+	transition: all 0.1s;
+} .slider::-webkit-slider-thumb:hover {
+	scale: 1.25;
+	box-shadow: -200px 0 64px 190px rgb(var(--primary-color-alt) / 100%);
+	cursor: pointer;
+	transition: all 0.1s;
+} .slider:focus-visible {
+    outline: none;
+} .slider:focus {
+    outline: none;
+}
+
+.skill-slider::-webkit-slider-thumb {
+	background: url('imgs/icons/arrow-up-svgrepo-com.png');
+	background-size:contain ;
+	width: 25px;
+	height: 25px;
+}
+
+.skill-levels-container {
+	position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    width: -webkit-fill-available;
+    gap: 22px;
+    left: 2px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.slider-input-container {
+    display: flex;
+    border-radius: 12px;
+    padding: 4px;
+    backdrop-filter: blur(12px);
+    background-color: rgb(var(--primary-color-alt) / 20%);
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.pfp-border-radius-slider-text {
+    text-align: center;
+    border: none;
+    background-color: transparent;
+    height: 20px;
+    width: 34px;
+    margin: 0;
+    padding: 0;
+    color: var(--text-primary-color);
+} .pfp-border-radius-slider-text:focus-visible { outline: none; }
+
+
+.pfp-container {
+    position: relative;
+    display: inline-grid;
+    height: min-content;
+    overflow: hidden;
+
+    box-shadow: 0px 0px 32px 0px black;
+    /* outline: 2px solid var(--primary-color); */
+    /* outline-offset: 2px; */
+} .pfp-container:hover .change-pfp-button {
+    display: block;
+}
+
 .pfp {
+    position: relative;
+    z-index: -1;
     object-fit: cover;
-    border-radius: 0%;
+    /* outline: 2px solid var(--primary-color); */
+    /* outline-offset: -2px; */
+}
+
+.change-pfp-button {
+    display: none;
+    position: absolute;
+    width: -webkit-fill-available;
+    bottom: 0;
+    filter: drop-shadow(0px 2px 1px black);
+    padding-bottom: 8px;
+    padding-top: 8px;
+} @media (hover: none) and (pointer: coarse) {
+    .change-pfp-button {
+        display: block;
+    }
 }
 
 .sidebar-section {
@@ -61,23 +395,45 @@ body {
     padding: 2%;
 }
 
-.sidebar-footer {
-    margin: 22px 0px 22px 0px;
-}
-
 .page-title {
-    margin-top: 0;
+    margin: 0;
     text-align: center;
 }
 
-.buttons-container-div {
+.sidebar-category-title {
+    text-align: center;
+}
+
+.sidebar-footer {
+    margin: 22px 0px 22px 0px;
+    position: sticky;
+    bottom: 2%;
+}
+
+.buttons-h-container-div {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-content: center;
     align-items: center;
     gap: 14px;
     justify-content: space-evenly;
+    border-radius: 12px;
+    padding: 16px;
+    border: solid 2px var(--primary-color);
+    background-color: rgb(var(--primary-color-alt) / 20%);
+    backdrop-filter: blur(12px);
+}
+
+.buttons-v-container-div {
+    flex: 0%;
+    display: flex;
+    gap: 14px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    align-content: stretch;
+    justify-content: center;
 }
 
 button {
@@ -88,21 +444,25 @@ button {
     color: var(--text-primary-color);
     background-color: rgb(var(--primary-color-alt) / 20%);
     padding: 4px 8px 4px 8px;
+    backdrop-filter: blur(12px);
     font-family: 'Poppins';
     transition: all 0.1s;
-}
-
-button:hover {
+} button:hover {
     cursor: pointer;
     scale: 0.975;
     box-shadow: 0px 0px 16px 0px rgb(var(--primary-color-alt) / 75%);
     transition: all 0.1s;
-}
-
-button:active {
+} button:active {
     scale: 0.95;
     box-shadow: 0px 0px 16px 0px var(--primary-color);
     transition: all 0.1s;
+} .button_left {
+    border: none;
+    border-right: 3px var(--primary-color) solid;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
 }
 
 .generate-button {

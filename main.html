@@ -3,7 +3,7 @@
   
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
     <title>CV Generator</title>
     <link rel="stylesheet" href="style.css">
   </head>
@@ -12,18 +12,65 @@
 
     <main class="main-section">
       
-      <sidebar class="cv-sidebar">
+      <sidebar class="cv-sidebar" id="cv-sidebar">
         
-        <pfpContainer id="pfp-container">
+        <pfpContainer class="pfp-container" id="pfp-container">
+          
           <img width="200" height="200" class="pfp" id="pfp" src="https://xsgames.co/randomusers/avatar.php?g=female">
+          <button class="change-pfp-button noPrint" onclick="changePfp()">
+            <svg width="28px" height="28px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 10V16M12 10L10 12M12 10L14 12M12.0627 6.06274L11.9373 5.93726C11.5914 5.59135 11.4184 5.4184 11.2166 5.29472C11.0376 5.18506 10.8425 5.10425 10.6385 5.05526C10.4083 5 10.1637 5 9.67452 5H6.2C5.0799 5 4.51984 5 4.09202 5.21799C3.71569 5.40973 3.40973 5.71569 3.21799 6.09202C3 6.51984 3 7.07989 3 8.2V15.8C3 16.9201 3 17.4802 3.21799 17.908C3.40973 18.2843 3.71569 18.5903 4.09202 18.782C4.51984 19 5.07989 19 6.2 19H17.8C18.9201 19 19.4802 19 19.908 18.782C20.2843 18.5903 20.5903 18.2843 20.782 17.908C21 17.4802 21 16.9201 21 15.8V10.2C21 9.0799 21 8.51984 20.782 8.09202C20.5903 7.71569 20.2843 7.40973 19.908 7.21799C19.4802 7 18.9201 7 17.8 7H14.3255C13.8363 7 13.5917 7 13.3615 6.94474C13.1575 6.89575 12.9624 6.81494 12.7834 6.70528C12.5816 6.5816 12.4086 6.40865 12.0627 6.06274Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke: var(--darkreader-text-ffffff, #e8e6e3);"></path> </g></svg>
+          </button>
+        
         </pfpContainer>
-      
+        
+        <div class="personal-info-element">
+          
+          <h1 style="text-align: center;" id="name-surname-text">Name Surname</h1>
+          
+          <div class="info-container">
+            
+            <p class="personal-info-paragraph" id="bdate-text">
+              <svg class="generic-svg" fill="#ffffff" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M25 0.09375L24.21875 1.09375C23.515625 1.992188 20 6.578125 20 9C20 11.414063 21.722656 13.441406 24 13.90625L24 10C24 9.449219 24.449219 9 25 9C25.550781 9 26 9.449219 26 10L26 13.90625C28.277344 13.441406 30 11.414063 30 9C30 6.578125 26.484375 1.992188 25.78125 1.09375 Z M 23 15C21.347656 15 20 16.347656 20 18L20 26L30 26L30 18C30 16.347656 28.652344 15 27 15 Z M 11 28C8.179688 28 5.761719 29.683594 4.65625 32.09375C5.226563 33.597656 5.804688 34.398438 5.8125 34.40625C6.703125 35.59375 8.390625 37 11.40625 37C13.863281 37 15.6875 36.15625 17 34.40625L17.75 33.375L18.5625 34.375C20.042969 36.152344 22.152344 37 25 37C27.769531 37 30 36.101563 31.4375 34.375L32.25 33.375L33 34.40625C34.3125 36.15625 36.136719 37 38.59375 37C41.050781 37 42.875 36.15625 44.1875 34.40625C44.214844 34.371094 44.964844 33.414063 45.375 32.125C44.277344 29.691406 41.839844 28 39 28 Z M 4 35.3125L4 42L46 42L46 35.34375C45.875 35.523438 45.792969 35.609375 45.78125 35.625C44.113281 37.847656 41.679688 39 38.59375 39C35.941406 39 33.785156 38.167969 32.15625 36.5C30.753906 37.785156 28.5 39 25 39C22.039063 39 19.640625 38.164063 17.84375 36.5C16.214844 38.164063 14.054688 39 11.40625 39C7.5625 39 5.351563 37.144531 4.1875 35.59375C4.175781 35.578125 4.113281 35.484375 4 35.3125 Z M 0 44L0 45C0 50 4.890625 50 6.5 50L43.5 50C45.105469 50 50 50 50 45L50 44Z"></path></g></svg>
+              29/03/2903
+            </p>
+            
+            <a href="tel:+12 345 678 1234" class="personal-info-paragraph" id="phone-number-text">
+              <svg class="generic-svg" fill="#ffffff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M21.384,17.752a2.108,2.108,0,0,1-.522,3.359,7.543,7.543,0,0,1-5.476.642C10.5,20.523,3.477,13.5,2.247,8.614a7.543,7.543,0,0,1,.642-5.476,2.108,2.108,0,0,1,3.359-.522L8.333,4.7a2.094,2.094,0,0,1,.445,2.328A3.877,3.877,0,0,1,8,8.2c-2.384,2.384,5.417,10.185,7.8,7.8a3.877,3.877,0,0,1,1.173-.781,2.092,2.092,0,0,1,2.328.445Z"></path></g></svg>
+              +12 345 678 1234
+            </a>
+            
+            <a href="mailto:youremail@gmail.com" class="personal-info-paragraph" id="email-text">
+              <svg class="generic-svg" fill="#ffffff" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 109.294 109.294" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M54.648,48.141L101.063,19.2c-0.505-0.08-1.017-0.132-1.542-0.132H9.775c-0.525,0-1.038,0.054-1.541,0.132L54.648,48.141z"></path> <path d="M57.569,59.331c-0.062,0.04-0.13,0.066-0.194,0.104c-0.067,0.037-0.139,0.073-0.206,0.107 c-0.365,0.188-0.741,0.339-1.125,0.439c-0.04,0.011-0.078,0.017-0.116,0.025c-0.423,0.099-0.848,0.16-1.274,0.16 c-0.001,0-0.003,0-0.004,0s-0.003,0-0.005,0c-0.426,0-0.852-0.06-1.273-0.16c-0.039-0.009-0.079-0.015-0.118-0.025 c-0.384-0.101-0.757-0.252-1.124-0.439c-0.069-0.034-0.139-0.07-0.207-0.107c-0.065-0.037-0.132-0.063-0.196-0.104L0.153,27.172 C0.06,27.715,0,28.271,0,28.843v51.609c0,5.398,4.375,9.774,9.774,9.774H99.52c5.398,0,9.774-4.376,9.774-9.774V28.843 c0-0.572-0.059-1.127-0.154-1.671L57.569,59.331z"></path> </g> </g></svg>
+              youremail@gmail.com
+            </a>
+            
+            <p class="personal-info-paragraph" id="address-text">
+              <svg class="generic-svg" fill="#ffffff" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>home</title> <path d="M19.469 12.594l3.625 3.313c0.438 0.406 0.313 0.719-0.281 0.719h-2.719v8.656c0 0.594-0.5 1.125-1.094 1.125h-4.719v-6.063c0-0.594-0.531-1.125-1.125-1.125h-2.969c-0.594 0-1.125 0.531-1.125 1.125v6.063h-4.719c-0.594 0-1.125-0.531-1.125-1.125v-8.656h-2.688c-0.594 0-0.719-0.313-0.281-0.719l10.594-9.625c0.438-0.406 1.188-0.406 1.656 0l2.406 2.156v-1.719c0-0.594 0.531-1.125 1.125-1.125h2.344c0.594 0 1.094 0.531 1.094 1.125v5.875z"></path> </g></svg>
+              Your Address, 1 70029 Santeramo in Colle (BA)
+            </p>
+          
+          </div>
+          
+          <h1 style="text-align: center;" id="name-surname-text">Skills</h1>
+          
+          <div class="info-container" id="skills-container">
+
+          </div>
+
+        </div>
+
       </sidebar>
       
       <div class="divisor-section"></div>
       
       <div class="cv-sections-container">
         
+        <h1 style="text-align: center;">Work Experience</h1>
+        
+        <div class="cv-jobs-container" id="cv-jobs-container">
+          
+        </div>
+
       </div>
 
     </main>
@@ -33,42 +80,111 @@
     <sidebar class="sidebar-section noPrint">
       
       <header>
+        <a href="https://github.com/xShader1374/" target="_blank">
+          <img class="generic-svg clickable-svg" style="border-radius: 100%;" height="28px" width="28px" src="https://avatars.githubusercontent.com/u/78726437?s=96&v=4">
+        </a>
         <h1 class="page-title">CV Generator</h1>
+        <a href="https://github.com/xShader1374/CV-Generator" target="_blank">
+          <svg class="generic-svg clickable-svg" fill="#ffffff" height="28px" width="28px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-143 145 512 512" xml:space="preserve" data-darkreader-inline-fill="" style="--darkreader-inline-fill: var(--darkreader-background-ffffff, #181a1b); --darkreader-inline-stroke: var(--darkreader-text-ffffff, #e8e6e3);" stroke="#ffffff" data-darkreader-inline-stroke=""><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M177.1,398.4c-8.6-1.5-17.6-1.3-26.4-0.8c-20,1.1-40,3-60,1.2c-9.5-0.9-19.1-1.8-28.7-1.6c-17.4,0.3-32,6-40.6,22.6 c-4.3,8.2-5.3,17-5,26.1c0.7,25.6,11.8,40.2,36.2,47.5c19.6,5.8,39.7,6.6,59.9,6.2c7.5,0,15,0.4,22.5-0.1 c15.5-0.9,30.7-3.2,45.4-8.6c15.2-5.6,24.3-16.3,27.6-31.8c1.3-6,1.9-12.3,1.8-18.4C209.6,420,195.6,401.5,177.1,398.4z M78.7,466.1c-6.5,7.1-15.9,7.2-22.6,0.3c-4.9-5-7.7-12.7-7.7-22.3c0.2-6.5,2.1-13.6,7.7-19.3c6.7-6.9,16.1-6.8,22.6,0.2 C88.5,435.6,88.5,455.5,78.7,466.1z M169.6,466.6c-6.1,6.3-14.9,6.5-21.4,0.7c-11.2-10.2-11.2-32.9,0-43.2 c6.4-5.9,15.2-5.7,21.4,0.6c5.7,5.8,7.6,13.1,7.9,20.9C177.2,453.5,175.2,460.7,169.6,466.6z"></path> <path d="M113,145c-141.4,0-256,114.6-256,256s114.6,256,256,256s256-114.6,256-256S254.4,145,113,145z M244.2,423.4 c-1.4,11.4-3.8,23.1-7.9,33.8c-12,30.7-36,47.6-67.8,52.7c-18.2,2.9-36.9,3-57.1,4.5c-18.1-1.6-38-1.8-57.3-5.2 c-37.4-6.6-62.8-32.8-70.2-70.3c-3.8-19.1-4.9-38.3,1-57.3c3.1-9.8,8.2-18.5,14.8-26.4c0.9-1,1.7-2.5,1.6-3.8 c-1.1-17.2,0.9-34.2,6-50.6c4.2-13.7,1.1-12.9,16.3-8.9c18.3,4.8,34.3,14.7,50,25c1.8,1.2,4.6,1.7,6.8,1.3 c22.2-3.4,44.3-3.6,66.5,0.3c1.6,0.3,3.7-0.3,5.2-1.2c13.5-8.8,27.4-16.7,42.6-22.2c5.5-2,11.3-3.3,16.9-5c2.5-0.7,3.6,0.2,4.5,2.6 c6.8,19,9.6,38.5,8.6,58.6c-0.1,1.1,0.5,2.6,1.2,3.5C243,374.6,247.3,398.2,244.2,423.4z"></path> </g> </g></svg>
+        </a>
       </header>
 
       <main class="sidebar-main-section">
         
-        Primary Color:
-        <input type="color" class="main-color-colorPicker" id="main-color-colorPicker" value="rgb(66, 164, 213)">
-        <button onclick="resetPrimaryColor()">
+        <h3 class="sidebar-category-title">Colors</h3>
+        <p>Primary Color</p>
+        <input type="color" class="main-color-colorPicker" id="main-color-colorPicker" value="#42a4d5">
+        <button class="generate-button" onclick="resetColor('primary')">
+          Reset
+        </button>
+
+        <p>Text Primary Color</p>
+        <input type="color" class="text-main-color-colorPicker" id="text-main-color-colorPicker" value="#6dbde5">
+        <button class="generate-button" onclick="resetColor('text-primary')">
           Reset
         </button>
         
-        <p>Image Border Radius:</p>
-        <div class="buttons-container-div"></div>
-          square <input type="range" min="0" max="100" value="0" id="pfp-border-radius-slider"> round
+        <div class="buttons-h-container-div">
+          
+          <input class="slider" type="range" min="0" max="100" value="0" step="1" id="pfp-border-radius-slider" style="flex: 50%;">
+          <svg class="generic-svg" fill="#ffffff" width="28px" height="28px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon" data-darkreader-inline-fill="" style="--darkreader-inline-fill: var(--darkreader-background-ffffff, #181a1b);"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M656 200h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm58 624h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM192 650h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 174h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm696-696h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 174h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 174h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 174h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 174h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm-348 0h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm-174 0h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm174-696H358c-127 0-230 103-230 230v182c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8V358c0-87.3 70.7-158 158-158h182c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8z"></path> </g></svg>
+          
+          <div class="slider-input-container">
+            
+            <button class="button_left" onclick="addPfpBorderRadiusAmount(-1)">
+              -
+            </button>
+            
+            <button onclick="addPfpBorderRadiusAmount(+1)">
+              +
+            </button>
+
+            <input type="text" class="pfp-border-radius-slider-text" id="pfp-border-radius-slider-text" value="0">
+              
+            </input>
+
+          </div>
+          
+        </div>
+        
+        <h3 class="sidebar-category-title">Personal Image</h3>
+        
+        <div class="buttons-h-container-div">
+          
+          <svg class="generic-svg" fill="#ffffff" width="28px" height="28px" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg" id="memory-border-top-left" data-darkreader-inline-fill="" style="--darkreader-inline-fill: var(--darkreader-background-ffffff, #181a1b);"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M18 10H20V12H18V10M10 18H12V20H10V18M6 18H8V20H6V18M18 6H20V8H18V6M14 18H16V20H14V18M18 18H20V20H18V18M18 14H20V16H18V14M2 2H20V4H4V20H2V2Z"></path></g></svg>
+          <input class="slider" type="range" min="0" max="100" value="0" step="1" id="pfp-border-radius-slider" style="flex: 50%;">
+          <svg class="generic-svg" fill="#ffffff" width="28px" height="28px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon" data-darkreader-inline-fill="" style="--darkreader-inline-fill: var(--darkreader-background-ffffff, #181a1b);"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M656 200h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm58 624h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM192 650h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 174h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm696-696h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 174h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 174h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 174h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 174h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm-348 0h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm-174 0h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm174-696H358c-127 0-230 103-230 230v182c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8V358c0-87.3 70.7-158 158-158h182c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8z"></path> </g></svg>
+          
+          <div class="slider-input-container">
+            
+            <button class="button_left" onclick="addPfpBorderRadiusAmount(-1)">
+              -
+            </button>
+            
+            <button onclick="addPfpBorderRadiusAmount(+1)">
+              +
+            </button>
+
+            <input type="text" class="pfp-border-radius-slider-text" id="pfp-border-radius-slider-text" value="0">
+              
+            </input>
+
+          </div>
+          
         </div>
 
       </main>
 
-      <footer class="sidebar-footer">
+      <footer class="sidebar-footer buttons-h-container-div">
+            
+            <div class="buttons-v-container-div">
+              <button class="generate-button" onclick="importJSON()">
+                Import JSON
+              </button>
+              
+              <button class="generate-button" onclick="exportJSON()">
+                Export JSON
+              </button>
+            </div>
 
-        <div class="buttons-container-div">
-        
-          <button class="generate-button" hidden>
-            Generate!
-          </button>
-          
-          <button class="generate-button" onclick="printPage()">
-            Print!
-          </button>
-  
-        </div>
+            <div class="buttons-v-container-div">
+              <button class="generate-button" onclick="printPage()">
+                Save
+              </button>
+
+              <button class="generate-button" onclick="printPage()">
+                Print
+              </button>
+            </div>
 
       </footer>
 
     </sidebar>
   
+    <div class="generic-loading-overlay noPrint" id="generic-loading-overlay">
+      <img src="imgs/379.gif" style="width: -webkit-fill-available;height: -webkit-fill-available;object-fit: scale-down;">
+    </div>
+
   <script src="script.js"></script>
   </body>
   
