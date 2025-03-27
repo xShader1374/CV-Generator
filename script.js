@@ -5,14 +5,12 @@ var json_info_holder = {
     "primary-text-color": "rgb(109, 189, 229)",
     "bg-darkness": 16,
     "personal_info": {
-      "name": "",
-      "surname": "",
-      "age": 0,
-      "bdate": "",
-      "phone_number": "",
-      "email": "",
-      "address": "",
-      "nationality": ""
+      "name": "Name",
+      "surname": "Surname",
+      "bdate": "29-03-2903",
+      "phone_number": "+12 345 678 1234",
+      "email": "youremail@gmail.com",
+      "address": "Your Address, 1 70029 Santeramo in Colle (BA)"
     },
     "skills": [],
     "work_experience": [],
@@ -20,8 +18,6 @@ var json_info_holder = {
     "hobbies": [],
     "courses": []
   };
-
-
 
 var cv_sidebar = document.getElementById("cv-sidebar");
 var cv_jobs_container = document.getElementById("cv-jobs-container")
@@ -40,6 +36,41 @@ var address_text = document.getElementById("address-text");
 
 var primary_color_picker = document.getElementById("main-color-colorPicker");
 var text_primary_color_picker = document.getElementById("text-main-color-colorPicker");
+var bg_luminosity_slider = document.getElementById("bg-luminosity-slider");
+var bg_luminosity_slider_text_element = document.getElementById("bg-luminosity-slider-text");
+
+
+bg_luminosity_slider.addEventListener("wheel", function(e) {
+    e.preventDefault();
+
+    if (e.deltaY < 0) {
+        addBGLuminosityAmount(1);
+    } else {
+        addBGLuminosityAmount(-1);
+    }
+});
+bg_luminosity_slider.addEventListener("input", function() {
+    json_info_holder["bg-darkness"] = bg_luminosity_slider.value;
+    document.documentElement.style.setProperty("--bg-darkness", json_info_holder["bg-darkness"]);
+    
+    bg_luminosity_slider_text_element.value = json_info_holder["bg-darkness"];
+}, {passive: true});
+bg_luminosity_slider_text_element.addEventListener("input", function() {
+    json_info_holder["bg-darkness"] = bg_luminosity_slider_text_element.value;
+    document.documentElement.style.setProperty("--bg-darkness", json_info_holder["bg-darkness"]);
+    
+    bg_luminosity_slider.value = bg_luminosity_slider_text_element.value;
+}, {passive: true});
+function addBGLuminosityAmount(amount) {
+    let newValue = Number(bg_luminosity_slider.value) + amount;
+    newValue = Math.min(100, Math.max(0, newValue));
+    
+    json_info_holder["bg-darkness"] = newValue;
+    bg_luminosity_slider.value = json_info_holder["bg-darkness"];
+    document.documentElement.style.setProperty("--bg-darkness", json_info_holder["bg-darkness"]);
+    
+    bg_luminosity_slider_text_element.value = json_info_holder["bg-darkness"];
+}
 
 pfp_border_radius_slider_element.addEventListener("wheel", function(e) {
     e.preventDefault();
@@ -53,15 +84,17 @@ pfp_border_radius_slider_element.addEventListener("wheel", function(e) {
 pfp_border_radius_slider_element.addEventListener("input", function() {
     json_info_holder["pfp_roundess"] = pfp_border_radius_slider_element.value;
     pfp_container.style.borderRadius = pfp_border_radius_slider_element.value + "px";
+    pfp.style.borderRadius = pfp_border_radius_slider_element.value + "px";
     
     pfp_border_radius_slider_text_element.value = pfp_border_radius_slider_element.value;
-});
+}, {passive: true});
 pfp_border_radius_slider_text_element.addEventListener("input", function() {
     json_info_holder["pfp_roundess"] = pfp_border_radius_slider_text_element.value;
     pfp_container.style.borderRadius = pfp_border_radius_slider_text_element.value + "px";
+    pfp.style.borderRadius = pfp_border_radius_slider_text_element.value + "px";
     
     pfp_border_radius_slider_element.value = pfp_border_radius_slider_text_element.value;
-});
+}, {passive: true});
 function addPfpBorderRadiusAmount(amount) {
     let newValue = Number(pfp_border_radius_slider_element.value) + amount;
     newValue = Math.min(100, Math.max(0, newValue));
@@ -69,6 +102,7 @@ function addPfpBorderRadiusAmount(amount) {
     json_info_holder["pfp_roundess"] = newValue;
     pfp_border_radius_slider_element.value = json_info_holder["pfp_roundess"];
     pfp_container.style.borderRadius = json_info_holder["pfp_roundess"] + "px";
+    pfp.style.borderRadius = json_info_holder["pfp_roundess"] + "px";
     
     pfp_border_radius_slider_text_element.value = json_info_holder["pfp_roundess"];
 }
@@ -87,11 +121,11 @@ primary_color_picker.addEventListener("input", function() {
     json_info_holder["primary-color"] = hex2rgb(primary_color_picker.value);
     document.documentElement.style.setProperty("--primary-color", json_info_holder["primary-color"]);
     document.documentElement.style.setProperty("--primary-color-alt", slice_rgb(json_info_holder["primary-color"]));
-});
+}, {passive: true});
 text_primary_color_picker.addEventListener("input", function() {
     json_info_holder["primary-text-color"] = hex2rgb(text_primary_color_picker.value);
     document.documentElement.style.setProperty("--text-primary-color", json_info_holder["primary-text-color"]);
-});
+}, {passive: true});
 function resetColor(whatColor){
     switch (whatColor) {
         case "primary":
@@ -176,6 +210,7 @@ function importJSON() {
 
                     pfp.src = json_info_holder["pfp"];
                     pfp_container.style.borderRadius = json_info_holder["pfp_roundess"] + "px";
+                    pfp.style.borderRadius = json_info_holder["pfp_roundess"] + "px";
                     pfp_border_radius_slider_text_element.value = json_info_holder["pfp_roundess"];
                     pfp_border_radius_slider_element.value = json_info_holder["pfp_roundess"];
 
