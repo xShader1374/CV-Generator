@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
-
 :root {
     --primary-color: rgb(66, 164, 213);
     --primary-color-alt: 66 164 213;
@@ -11,6 +10,7 @@
 html {
     scroll-behavior: smooth;
     height: -webkit-fill-available;
+    height: -moz-available;
     min-height: fit-content;
 }
 
@@ -18,6 +18,7 @@ body {
     scroll-behavior: smooth;
     display: flex;
     height: -webkit-fill-available;
+    height: -moz-available;
     background-color: color-mix(in srgb, var(--primary-color), rgb(var(--bg-darkness), var(--bg-darkness), var(--bg-darkness)) 90%);
     color: var(--text-primary-color);
     font-family: 'Poppins';
@@ -32,7 +33,9 @@ body {
     display: none;
     position: absolute;
     width: -webkit-fill-available;
+    width: -moz-available;
     height: -webkit-fill-available;
+    height: -moz-available;
     backdrop-filter: blur(12px);
     background-color: rgba(0, 0, 0, 0.55);
     padding: 20%;
@@ -67,6 +70,7 @@ body {
     display: flex;
     gap: 24px;
     height: -webkit-fill-available;
+    height: -moz-available;
     min-height: fit-content;
 }
 
@@ -98,12 +102,14 @@ body {
     flex: 0%;
     height: auto;
     width: -webkit-fill-available;
+    width: -moz-available;
     border-color: var(--primary-color);
     border-width: 1px;
     border-style: solid;
     border-radius: 400px;
     box-shadow: 0px 0px 32px 1px var(--primary-color);
     min-height: -webkit-fill-available;
+    min-height: -moz-available;
 }
 
 
@@ -131,6 +137,7 @@ body {
     unicode-bidi: isolate;
     gap: 14px;
     width: -webkit-fill-available;
+    width: -moz-available;
     align-items: center;
     align-content: center;
     justify-content: center;
@@ -262,6 +269,7 @@ header {
 
 input[type="color" i] {
     width: -webkit-fill-available;
+    width: -moz-available;
 } input[type="color" i]:hover {
     cursor: pointer;
 }
@@ -269,7 +277,9 @@ input[type="color" i] {
 
 .slider {
 	-webkit-appearance: none;
+    appearance: none;
     width: -webkit-fill-available;
+    width: -moz-available;
     height: 25px;
     border-radius: 100px;
     background: rgb(var(--primary-color-alt) / 0%);
@@ -305,9 +315,26 @@ input[type="color" i] {
     outline: none;
 } .slider:focus {
     outline: none;
+} .slider::-moz-range-thumb {
+    -webkit-appearance: none;
+	appearance: none;
+	width: 25px;
+	height: 25px;
+	border-radius: 100px;
+	background-color: var(--primary-color);
+    border: none;
+    outline: none;
+
+    box-shadow: -200px 0 64px 190px rgb(var(--primary-color-alt) / 75%);
+    transition: all 0.1s;
+} .slider::-moz-range-thumb:hover {
+    scale: 1.25;
+    box-shadow: -200px 0 64px 190px rgb(var(--primary-color-alt) / 100%);
+    cursor: pointer;
+    transition: all 0.1s;
 }
 
-.skill-slider::-webkit-slider-thumb {
+.skill-slider::-webkit-slider-thumb, .skill-slider::-moz-range-thumb {
 	background: url('imgs/icons/arrow-up-svgrepo-com.png');
 	background-size:contain ;
 	width: 25px;
@@ -323,6 +350,7 @@ input[type="color" i] {
     align-items: center;
     justify-content: center;
     width: -webkit-fill-available;
+    width: -moz-available;
     gap: 22px;
     left: 2px;
     top: 0;
@@ -352,6 +380,8 @@ input[type="color" i] {
     margin: 0;
     padding: 0;
     color: var(--text-primary-color);
+    font-family: inherit;
+    text-align: center;
 } .pfp-border-radius-slider-text:focus-visible { outline: none; }
 
 
@@ -380,6 +410,7 @@ input[type="color" i] {
     display: none;
     position: absolute;
     width: -webkit-fill-available;
+    width: -moz-available;
     bottom: 0;
     filter: drop-shadow(0px 2px 1px black);
     padding-bottom: 8px;
@@ -445,7 +476,7 @@ button {
     background-color: rgb(var(--primary-color-alt) / 20%);
     padding: 4px 8px 4px 8px;
     backdrop-filter: blur(12px);
-    font-family: 'Poppins';
+    font-family: inherit;
     transition: all 0.1s;
 } button:hover {
     cursor: pointer;
@@ -467,6 +498,7 @@ button {
 
 .generate-button {
     width: -webkit-fill-available;
+    width: -moz-available;
 }
 
 @media print {
