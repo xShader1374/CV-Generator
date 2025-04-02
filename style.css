@@ -501,6 +501,33 @@ button {
     width: -moz-available;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(var(--primary-color-alt) / 20%);
+  border-radius: 150px;
+  transition: all .1s;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--primary-color-alt) / 20%);
+  border-radius: 150px;
+  border: solid 2px var(--primary-color);
+  transition: all .1s;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: color-mix(in srgb, var(--primary-color), rgb(255, 255, 255) 55%);
+  border-radius: 150px;
+  transition: all .1s;
+}
+
 @media print {
     .noPrint {
         display: none;
