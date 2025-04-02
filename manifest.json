@@ -1,21 +1,52 @@
 {
-    "short_name": "CV-Generator",
-    "name": "CV-Generator",
+    "short_name": "CV Generator",
+    "name": "CV Generator",
+    "description": "Crea il tuo CV professionale in modo semplice e moderno",
+    "categories": ["productivity", "education", "business"],
+    "lang": "it-IT",
+    "dir": "ltr",
     "icons": [
       {
-        "src": "/favicon-192x192.png",
+        "src": "/favicons/favicon-192x192.png",
         "sizes": "192x192",
-        "type": "image/png"
+        "type": "image/png",
+        "purpose": "any"
       },
       {
-        "src": "/favicon-512x512.png",
+        "src": "/favicons/favicon-512x512.png",
         "sizes": "512x512",
-        "type": "image/png"
+        "type": "image/png",
+        "purpose": "maskable"
+      }
+    ],
+    "screenshots": [
+      {
+        "src": "/imgs/screenshot1.png",
+        "sizes": "1080x1920",
+        "type": "image/png",
+        "label": "Interfaccia principale"
       }
     ],
     "start_url": ".",
+    "scope": "/",
     "display": "standalone",
-    "theme_color": "#000000",
-    "background_color": "#ffffff"
+    "orientation": "portrait",
+    "theme_color": "#42a4d5",
+    "background_color": "#ffffff",
+    "related_applications": [],
+    "prefer_related_applications": false,
+    "shortcuts": [
+      {
+        "name": "Nuovo CV",
+        "short_name": "Nuovo",
+        "url": "/?new",
+        "icons": [
+          {
+            "src": "/favicons/favicon-96x96.png",
+            "sizes": "96x96"
+          }
+        ]
+      }
+    ]
   }
   
