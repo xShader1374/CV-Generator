@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" width="512" height="512"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512">
+  <!-- Generator: Adobe Illustrator 29.3.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 151)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: url(#Sfumatura_senza_nome_1183);
+      }
+
+      .st0, .st1, .st2, .st3, .st4 {
+        stroke: #8c8cff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 28px;
+      }
+
+      .st5 {
+        fill: #0a0a3c;
+      }
+
+      .st1 {
+        fill: url(#Sfumatura_senza_nome_118);
+      }
+
+      .st2 {
+        fill: url(#Sfumatura_senza_nome_1181);
+      }
+
+      .st3 {
+        fill: url(#Sfumatura_senza_nome_1182);
+      }
+
+      .st6 {
+        fill: url(#Sfumatura_senza_nome_265);
+      }
+
+      .st4 {
+        fill: url(#Sfumatura_senza_nome_392);
+      }
+
+      .st7 {
+        fill: #8c8cff;
+      }
+
+      .st8 {
+        display: none;
+      }
+
+      .st9 {
+        fill: gray;
+      }
+    </style>
+    <radialGradient id="SvgjsRadialGradient1017" data-name="Sfumatura senza nome 265" cx="258.67" cy="256.33" fx="258.67" fy="256.33" r="242.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#336"></stop>
+      <stop offset=".5" stop-color="#4b4b7d"></stop>
+    </radialGradient>
+    <radialGradient id="SvgjsRadialGradient1016" data-name="Sfumatura senza nome 118" cx="256" cy="269.81" fx="256" fy="269.81" r="59.89" gradientTransform="translate(244.16 384.17) scale(.27 -.85)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#191932" stop-opacity=".5"></stop>
+      <stop offset="1" stop-color="#191932" stop-opacity=".5"></stop>
+    </radialGradient>
+    <radialGradient id="SvgjsRadialGradient1015" data-name="Sfumatura senza nome 118" cx="255.76" cy="288.91" fx="255.76" fy="288.91" gradientTransform="translate(17.61 -288.91) scale(.93 2)" xlink:href="#Sfumatura_senza_nome_118"></radialGradient>
+    <radialGradient id="SvgjsRadialGradient1014" data-name="Sfumatura senza nome 392" cx="196.75" cy="187.17" fx="196.75" fy="187.17" r="27.66" gradientTransform="translate(-125.65 -187.17) scale(1.71 2)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6464c8" stop-opacity=".5"></stop>
+      <stop offset="1" stop-color="#6464c8" stop-opacity=".5"></stop>
+    </radialGradient>
+    <radialGradient id="SvgjsRadialGradient1013" data-name="Sfumatura senza nome 118" cy="112.17" fy="112.17" gradientTransform="translate(244.16 317.06) scale(.27 -.85)" xlink:href="#Sfumatura_senza_nome_118"></radialGradient>
+    <radialGradient id="SvgjsRadialGradient1012" data-name="Sfumatura senza nome 118" cx="255.85" cy="357.31" fx="255.85" fy="357.31" gradientTransform="translate(17.61 -357.31) scale(.93 2)" xlink:href="#Sfumatura_senza_nome_118"></radialGradient>
+  </defs>
+  <g id="SvgjsG1011" class="st8">
+    <rect class="st9" width="512" height="512"></rect>
+  </g>
+  <g id="SvgjsG1010" class="st8">
+    <rect class="st6" x="16.17" y="13.83" width="485" height="485"></rect>
+  </g>
+  <g id="SvgjsG1009">
+    <g>
+      <rect class="st5" x="115.5" y="78" width="281" height="356" rx="43.86" ry="43.86"></rect>
+      <path class="st7" d="M352.64,85c20.33,0,36.86,16.54,36.86,36.86v268.28c0,20.33-16.54,36.86-36.86,36.86h-193.28c-20.33,0-36.86-16.54-36.86-36.86V121.86c0-20.33,16.54-36.86,36.86-36.86h193.28M352.64,71h-193.28c-28.09,0-50.86,22.77-50.86,50.86v268.28c0,28.09,22.77,50.86,50.86,50.86h193.28c28.09,0,50.86-22.77,50.86-50.86V121.86c0-28.09-22.77-50.86-50.86-50.86h0Z"></path>
+    </g>
+    <path class="st1" d="M289.83,154.26c15.06.12,30.11.24,45.17.37"></path>
+    <path class="st2" d="M177,289.34c52.61-.29,105.22-.57,157.83-.86"></path>
+    <rect class="st4" x="177" y="153.4" width="67.54" height="67.54" rx="22.57" ry="22.57"></rect>
+    <path class="st3" d="M289.83,221.37c15.06.12,30.11.24,45.17.37"></path>
+    <path class="st0" d="M177.08,357.74c52.61-.29,105.22-.57,157.83-.86"></path>
+  </g>
+</svg><style>@media (prefers-color-scheme: light) { :root { filter: contrast(1) brightness(1); } }
+@media (prefers-color-scheme: dark) { :root { filter: contrast(1) brightness(1.2); } }
+</style></svg>
