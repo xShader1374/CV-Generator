@@ -334,7 +334,13 @@ input[type="color" i] {
     transition: all 0.1s;
 }
 
-.skill-slider::-webkit-slider-thumb, .skill-slider::-moz-range-thumb {
+.skill-slider::-webkit-slider-thumb {
+	background: url('imgs/icons/arrow-up-svgrepo-com.png');
+	background-size:contain ;
+	width: 25px;
+}
+
+.skill-slider::-moz-range-thumb {
 	background: url('imgs/icons/arrow-up-svgrepo-com.png');
 	background-size:contain ;
 	width: 25px;
