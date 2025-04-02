@@ -338,6 +338,7 @@ input[type="color" i] {
 	background: url('imgs/icons/arrow-up-svgrepo-com.png');
 	background-size:contain ;
 	width: 25px;
+	height: 25px;
 }
 
 .skill-slider::-moz-range-thumb {
