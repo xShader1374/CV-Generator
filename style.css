@@ -31,7 +31,7 @@ body {
 
 .generic-loading-overlay {
     display: none;
-    position: absolute;
+    position: fixed;
     width: -webkit-fill-available;
     width: -moz-available;
     height: -webkit-fill-available;
