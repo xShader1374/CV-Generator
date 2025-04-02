@@ -1,9 +1,9 @@
 {
     "short_name": "CV Generator",
     "name": "CV Generator",
-    "description": "Crea il tuo CV professionale in modo semplice e moderno",
+    "description": "Create your professional CV in a simple and modern way",
     "categories": ["productivity", "education", "business"],
-    "lang": "it-IT",
+    "lang": "en-US",
     "dir": "ltr",
     "icons": [
       {
@@ -21,10 +21,10 @@
     ],
     "screenshots": [
       {
-        "src": "/imgs/screenshot1.png",
+        "src": "imgs/screenshot1.png",
         "sizes": "1080x1920",
         "type": "image/png",
-        "label": "Interfaccia principale"
+        "label": "Main Interface"
       }
     ],
     "start_url": ".",
@@ -37,8 +37,8 @@
     "prefer_related_applications": false,
     "shortcuts": [
       {
-        "name": "Nuovo CV",
-        "short_name": "Nuovo",
+        "name": "New CV",
+        "short_name": "New",
         "url": "/?new",
         "icons": [
           {
