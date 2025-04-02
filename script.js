@@ -296,9 +296,11 @@ function importJSON() {
     }
 
     input.oncancel = (event) => {
-        // Gestione dell'annullamento del caricamento del file
-        generic_loading_overlay.style.display = "none";
-        console.log('Caricamento annullato: ', event);
+        if (event.type == 'cancel' || event.type == 'abort') {
+            // Gestione dell'annullamento del caricamento del file
+            generic_loading_overlay.style.display = "none";
+            console.log('Caricamento annullato: ', event);
+        }
     }
 
     input.click();
