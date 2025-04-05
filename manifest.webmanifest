@@ -1,5 +1,5 @@
 {
-    "short_name": "CV Generator",
+    "short_name": "CVGen",
     "name": "CV Generator",
     "description": "Create your professional CV in a simple and modern way",
     "categories": ["productivity", "education", "business"],
@@ -32,7 +32,7 @@
     "display": "standalone",
     "orientation": "portrait",
     "theme_color": "#42a4d5",
-    "background_color": "#ffffff",
+    "background_color": "#151f24",
     "related_applications": [],
     "prefer_related_applications": false,
     "shortcuts": [
