@@ -208,7 +208,8 @@ function importJSON() {
                     primary_color_picker.value = rgb2hex(json_info_holder["primary-color"]);
                     document.documentElement.style.setProperty("--primary-color", json_info_holder["primary-color"]);
                     document.documentElement.style.setProperty("--primary-color-alt", slice_rgb(json_info_holder["primary-color"]));
-                    
+                    meta_theme_color.content = rgb2hex(json_info_holder["primary-color"]);
+
                     text_primary_color_picker.value = rgb2hex(json_info_holder["primary-text-color"]);
                     document.documentElement.style.setProperty("--text-primary-color", json_info_holder["primary-text-color"]);
 

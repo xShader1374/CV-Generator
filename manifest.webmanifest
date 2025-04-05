@@ -39,7 +39,7 @@
       {
         "name": "New CV",
         "short_name": "New",
-        "url": "/?new",
+        "url": ".",
         "icons": [
           {
             "src": "favicons/favicon-96x96.png",
