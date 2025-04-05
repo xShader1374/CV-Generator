@@ -123,6 +123,7 @@ primary_color_picker.addEventListener("input", function() {
     json_info_holder["primary-color"] = hex2rgb(primary_color_picker.value);
     document.documentElement.style.setProperty("--primary-color", json_info_holder["primary-color"]);
     document.documentElement.style.setProperty("--primary-color-alt", slice_rgb(json_info_holder["primary-color"]));
+    meta_theme_color.content = rgb2hex(json_info_holder["primary-color"]);
 }, {passive: true});
 text_primary_color_picker.addEventListener("input", function() {
     json_info_holder["primary-text-color"] = hex2rgb(text_primary_color_picker.value);
@@ -133,8 +134,10 @@ function resetColor(whatColor){
         case "primary":
             json_info_holder["primary-color"] = "rgb(66, 164, 213)";
             console.log(rgb2hex(json_info_holder["primary-color"]));
+            
             primary_color_picker.value = rgb2hex(json_info_holder["primary-color"]);
-            meta_theme_color.setAttribute("content", rgb2hex(json_info_holder["primary-color"]));
+            meta_theme_color.content = rgb2hex(json_info_holder["primary-color"]);
+            
             document.documentElement.style.setProperty("--primary-color", json_info_holder["primary-color"]);
             document.documentElement.style.setProperty("--primary-color-alt", slice_rgb(json_info_holder["primary-color"]));
 
