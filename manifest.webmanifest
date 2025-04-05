@@ -24,7 +24,7 @@
         "src": "imgs/screenshot1.png",
         "sizes": "1080x1920",
         "type": "image/png",
-        "label": "Main Interface"
+        "form_factor": "wide"
       }
     ],
     "start_url": ".",
