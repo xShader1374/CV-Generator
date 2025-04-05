@@ -134,7 +134,7 @@ function resetColor(whatColor){
             json_info_holder["primary-color"] = "rgb(66, 164, 213)";
             console.log(rgb2hex(json_info_holder["primary-color"]));
             primary_color_picker.value = rgb2hex(json_info_holder["primary-color"]);
-            meta_theme_color.content = rgb2hex(json_info_holder["primary-color"]);
+            meta_theme_color.setAttribute("content", rgb2hex(json_info_holder["primary-color"]));
             document.documentElement.style.setProperty("--primary-color", json_info_holder["primary-color"]);
             document.documentElement.style.setProperty("--primary-color-alt", slice_rgb(json_info_holder["primary-color"]));
 
