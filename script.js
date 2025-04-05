@@ -206,6 +206,8 @@ function importJSON() {
                     text_primary_color_picker.value = rgb2hex(json_info_holder["primary-text-color"]);
                     document.documentElement.style.setProperty("--text-primary-color", json_info_holder["primary-text-color"]);
 
+                    bg_luminosity_slider.value = json_info_holder["bg-darkness"];
+                    bg_luminosity_slider_text_element.value = json_info_holder["bg-darkness"];
                     document.documentElement.style.setProperty("--bg-darkness", json_info_holder["bg-darkness"]);
 
                     pfp.src = json_info_holder["pfp"];
