@@ -37,6 +37,7 @@ body {
     height: -webkit-fill-available;
     height: -moz-available;
     backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     background-color: rgba(0, 0, 0, 0.55);
     padding: 20%;
     transition: all .1s;
@@ -148,6 +149,7 @@ body {
     padding: 16px;
     border: dashed 2px var(--primary-color);
     backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     background-color: rgb(var(--primary-color-alt) / 20%);
 }
 
@@ -164,6 +166,7 @@ body {
     padding: 16px 16px 42px 2em;
     border: dashed 2px var(--primary-color);
     backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     background-color: rgb(var(--primary-color-alt) / 20%);
 }
 
@@ -263,6 +266,7 @@ header {
     padding: 16px;
     border: dashed 2px var(--primary-color);
     backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     background-color: rgb(var(--primary-color-alt) / 20%);
 }
 
@@ -366,6 +370,7 @@ input[type="color" i] {
     border-radius: 12px;
     padding: 4px;
     backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     background-color: rgb(var(--primary-color-alt) / 20%);
     align-items: center;
     justify-content: center;
@@ -457,6 +462,7 @@ input[type="color" i] {
     border: solid 2px var(--primary-color);
     background-color: rgb(var(--primary-color-alt) / 20%);
     backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 
 .buttons-v-container-div {
@@ -479,6 +485,7 @@ button {
     background-color: rgb(var(--primary-color-alt) / 20%);
     padding: 4px 8px 4px 8px;
     backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     font-family: inherit;
     transition: all 0.1s;
 } button:hover {
