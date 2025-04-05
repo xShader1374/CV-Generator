@@ -19,6 +19,8 @@ var json_info_holder = {
     "courses": []
   };
 
+var meta_theme_color = document.getElementById("meta-theme-color");
+
 var cv_sidebar = document.getElementById("cv-sidebar");
 var cv_jobs_container = document.getElementById("cv-jobs-container")
 var skills_container = document.getElementById("skills-container");
@@ -132,6 +134,7 @@ function resetColor(whatColor){
             json_info_holder["primary-color"] = "rgb(66, 164, 213)";
             console.log(rgb2hex(json_info_holder["primary-color"]));
             primary_color_picker.value = rgb2hex(json_info_holder["primary-color"]);
+            meta_theme_color.content = rgb2hex(json_info_holder["primary-color"]);
             document.documentElement.style.setProperty("--primary-color", json_info_holder["primary-color"]);
             document.documentElement.style.setProperty("--primary-color-alt", slice_rgb(json_info_holder["primary-color"]));
 
@@ -157,18 +160,18 @@ function changePfp() {
 
     input.onchange = e => { 
 
-    // Getting a hold of the file reference
-    var file = e.target.files[0]; 
+        // Getting a hold of the file reference
+        var file = e.target.files[0]; 
 
-    // Setting up the reader
-    var reader = new FileReader();
-    reader.readAsDataURL(file); // this is reading as data url
+        // Setting up the reader
+        var reader = new FileReader();
+        reader.readAsDataURL(file); // this is reading as data url
 
-    // Here we tell the reader what to do when it's done reading...
-    reader.onload = readerEvent => {
-        json_info_holder["pfp"] = readerEvent.target.result; // This is the content!
-        pfp.src = json_info_holder["pfp"];
-    }
+        // Here we tell the reader what to do when it's done reading...
+        reader.onload = readerEvent => {
+            json_info_holder["pfp"] = readerEvent.target.result; // This is the content!
+            pfp.src = json_info_holder["pfp"];
+        }
 
     }
 
