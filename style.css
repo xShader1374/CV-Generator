@@ -167,6 +167,7 @@ body {
     border: dashed 2px var(--primary-color);
     backdrop-filter: blur(12px);
     background-color: rgb(var(--primary-color-alt) / 20%);
+    filter: drop-shadow(0px 2px 1px black);
 }
 
 .company-name {
