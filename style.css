@@ -1,10 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@font-face {
+  font-family: 'Poppins';
+  src: url('fonts/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('fonts/Poppins-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Great Vibes';
+  src: url('fonts/GreatVibes-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
     --primary-color: rgb(66, 164, 213);
     --primary-color-alt: 66 164 213;
     --bg-darkness: 16;
     --text-primary-color: rgb(109, 189, 229);
+    
+    --pfp-roundness: 0px;
+    --pfp-shadow-color: rgb(0, 0, 0);
+    --pfp-shadow-blur: 32px;
+    --pfp-shadow-spread: 0px;
 }
 
 html {
@@ -36,10 +63,11 @@ body {
     width: -moz-available;
     height: -webkit-fill-available;
     height: -moz-available;
+    -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
     background-color: rgba(0, 0, 0, 0.55);
     padding: 20%;
-    transition: all .1s;
+    transition: all .1s ease;
     top: 0;
     left: 0;
 }
@@ -56,13 +84,13 @@ body {
 
 .clickable-svg {
     vertical-align: middle;
-    transition: all .1s;
+    transition: all .1s ease;
 } .clickable-svg:hover {
     scale: 0.95;
-    transition: all .1s;
+    transition: all .1s ease;
 } .clickable-svg:active {
     scale: 0.9;
-    transition: all .1s;
+    transition: all .1s ease;
 }
 
 .main-section {
@@ -148,6 +176,7 @@ body {
     border-radius: 12px;
     padding: 16px;
     border: dashed 2px var(--primary-color);
+    -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
     background-color: rgb(var(--primary-color-alt) / 20%);
     filter: drop-shadow(0px 2px 1px black);
@@ -165,6 +194,7 @@ body {
     border-radius: 12px;
     padding: 16px 16px 42px 2em;
     border: dashed 2px var(--primary-color);
+    -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
     background-color: rgb(var(--primary-color-alt) / 20%);
     filter: drop-shadow(0px 2px 1px black);
@@ -264,15 +294,25 @@ header {
     border-radius: 12px;
     padding: 16px;
     border: dashed 2px var(--primary-color);
+    -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
     background-color: rgb(var(--primary-color-alt) / 20%);
     filter: drop-shadow(0px 2px 1px black);
 }
 
 
-input[type="color" i] {
+input[type="color" i], input[type="color" i]::-webkit-color-swatch-wrapper, input[type="color" i]::-webkit-color-swatch  {
+    appearance: none;
     width: -webkit-fill-available;
     width: -moz-available;
+    border: none;
+    padding: 0;
+    margin: 0;
+    padding-block: 0;
+    background: none;
+    outline: none;
+    border-radius: 8px 0px 0px 8px;
+    color: transparent;
 } input[type="color" i]:hover {
     cursor: pointer;
 }
@@ -289,8 +329,8 @@ input[type="color" i] {
     border: none;
     outline: none;
     opacity: 0.9;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
+    -webkit-transition: .2s ease;
+    transition: opacity .2s ease;
     overflow: hidden;
     box-shadow: 0px 0 1px 4px rgb(var(--primary-color-alt) / 50%);
     margin: 4px;
@@ -310,12 +350,12 @@ input[type="color" i] {
 	background-color: var(--primary-color);
 	
     box-shadow: -200px 0 64px 190px rgb(var(--primary-color-alt) / 75%);
-	transition: all 0.1s;
+	transition: all 0.1s ease;
 } .slider::-webkit-slider-thumb:hover {
 	scale: 1.25;
 	box-shadow: -200px 0 64px 190px rgb(var(--primary-color-alt) / 100%);
 	cursor: pointer;
-	transition: all 0.1s;
+	transition: all 0.1s ease;
 } .slider:focus-visible {
     outline: none;
 } .slider:focus {
@@ -331,12 +371,12 @@ input[type="color" i] {
     outline: none;
 
     box-shadow: -200px 0 64px 190px rgb(var(--primary-color-alt) / 75%);
-    transition: all 0.1s;
+    transition: all 0.1s ease;
 } .slider::-moz-range-thumb:hover {
     scale: 1.25;
     box-shadow: -200px 0 64px 190px rgb(var(--primary-color-alt) / 100%);
     cursor: pointer;
-    transition: all 0.1s;
+    transition: all 0.1s ease;
 } .skill-slider::-webkit-slider-thumb {
 	background: url('imgs/icons/arrow-up-svgrepo-com.png');
 	background-size:contain ;
@@ -370,6 +410,7 @@ input[type="color" i] {
     display: flex;
     border-radius: 12px;
     padding: 4px;
+    -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
     background-color: rgb(var(--primary-color-alt) / 20%);
     align-items: center;
@@ -398,7 +439,8 @@ input[type="color" i] {
     display: inline-grid;
     height: min-content;
     overflow: hidden;
-    box-shadow: 0px 0px 32px 0px black;
+    box-shadow: 0px 0px var(--pfp-shadow-blur, 32px) var(--pfp-shadow-spread, 0px) var(--pfp-shadow-color, rgb(0, 0, 0));
+    border-radius: var(--pfp-roundness);
     /* outline: 2px solid var(--primary-color); */
     /* outline-offset: 2px; */
 } .pfp-container:hover .change-pfp-button {
@@ -409,6 +451,9 @@ input[type="color" i] {
     position: relative;
     z-index: -1;
     object-fit: cover;
+    border-radius: var(--pfp-roundness);
+    text-align: center;
+    align-content: center;
     /* outline: 2px solid var(--primary-color); */
     /* outline-offset: -2px; */
 }
@@ -463,6 +508,8 @@ input[type="color" i] {
 }
 
 .buttons-h-container-div {
+    width: -webkit-fill-available;
+    width: -moz-available;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -472,8 +519,10 @@ input[type="color" i] {
     justify-content: space-evenly;
     border-radius: 12px;
     padding: 16px;
+    color: var(--text-primary-color);
     border: solid 2px var(--primary-color);
     background-color: rgb(var(--primary-color-alt) / 20%);
+    -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
     filter: drop-shadow(0px 2px 1px black);
 }
@@ -497,18 +546,19 @@ button {
     color: var(--text-primary-color);
     background-color: rgb(var(--primary-color-alt) / 20%);
     padding: 4px 8px 4px 8px;
+    -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
     font-family: inherit;
-    transition: all 0.1s;
+    transition: all 0.1s ease;
 } button:hover {
     cursor: pointer;
     scale: 0.975;
     box-shadow: 0px 0px 16px 0px rgb(var(--primary-color-alt) / 75%);
-    transition: all 0.1s;
+    transition: all 0.1s ease;
 } button:active {
     scale: 0.95;
     box-shadow: 0px 0px 16px 0px var(--primary-color);
-    transition: all 0.1s;
+    transition: all 0.1s ease;
 } .button_left {
     border: none;
     border-right: 3px var(--primary-color) solid;
@@ -532,7 +582,7 @@ button {
 ::-webkit-scrollbar-track {
   background: rgb(var(--primary-color-alt) / 20%);
   border-radius: 150px;
-  transition: all .1s;
+  transition: all .1s ease;
 }
 
 /* Handle */
@@ -540,14 +590,19 @@ button {
   background: rgb(var(--primary-color-alt) / 20%);
   border-radius: 150px;
   border: solid 2px var(--primary-color);
-  transition: all .1s;
+  transition: all .1s ease;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: color-mix(in srgb, var(--primary-color), rgb(255, 255, 255) 55%);
   border-radius: 150px;
-  transition: all .1s;
+  transition: all .1s ease;
+}
+
+::selection {
+	color: color-mix(in srgb, var(--primary-color), rgb(var(--bg-darkness), var(--bg-darkness), var(--bg-darkness)) 90%);
+	background: var(--text-primary-color);
 }
 
 @media print {

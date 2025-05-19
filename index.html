@@ -69,7 +69,7 @@
         
         <pfpContainer class="pfp-container" id="pfp-container">
           
-          <img width="200" height="200" class="pfp" id="pfp" src="https://xsgames.co/randomusers/avatar.php?g=female">
+          <img width="200" height="200" class="pfp" id="pfp" src="https://xsgames.co/randomusers/avatar.php?g=female" alt="Profile Image (pfp)">
           <button class="change-pfp-button noPrint" onclick="changePfp()" title="Change image picture">
             <svg width="28px" height="28px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 10V16M12 10L10 12M12 10L14 12M12.0627 6.06274L11.9373 5.93726C11.5914 5.59135 11.4184 5.4184 11.2166 5.29472C11.0376 5.18506 10.8425 5.10425 10.6385 5.05526C10.4083 5 10.1637 5 9.67452 5H6.2C5.0799 5 4.51984 5 4.09202 5.21799C3.71569 5.40973 3.40973 5.71569 3.21799 6.09202C3 6.51984 3 7.07989 3 8.2V15.8C3 16.9201 3 17.4802 3.21799 17.908C3.40973 18.2843 3.71569 18.5903 4.09202 18.782C4.51984 19 5.07989 19 6.2 19H17.8C18.9201 19 19.4802 19 19.908 18.782C20.2843 18.5903 20.5903 18.2843 20.782 17.908C21 17.4802 21 16.9201 21 15.8V10.2C21 9.0799 21 8.51984 20.782 8.09202C20.5903 7.71569 20.2843 7.40973 19.908 7.21799C19.4802 7 18.9201 7 17.8 7H14.3255C13.8363 7 13.5917 7 13.3615 6.94474C13.1575 6.89575 12.9624 6.81494 12.7834 6.70528C12.5816 6.5816 12.4086 6.40865 12.0627 6.06274Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke: var(--darkreader-text-ffffff, #e8e6e3);"></path> </g></svg>
           </button>
@@ -78,7 +78,7 @@
         
         <div class="personal-info-element">
           
-          <h1 style="text-align: center;" id="name-surname-text">Name Surname</h1>
+          <h1 style="text-align: center; overflow-wrap: anywhere;" id="name-surname-text">Name Surname</h1>
           
           <div class="info-container">
             
@@ -104,7 +104,7 @@
           
           </div>
           
-          <h1 style="text-align: center;" id="name-surname-text">Skills</h1>
+          <h1 style="text-align: center;">Skills</h1>
           
           <div class="info-container" id="skills-container">
 
@@ -135,7 +135,7 @@
       <header>
         
         <a href="https://github.com/xShader1374/" target="_blank" title="Dev's GitHub">
-          <img class="generic-svg clickable-svg" style="border-radius: 100%;" height="28px" width="28px" src="https://avatars.githubusercontent.com/u/78726437?s=96&v=4">
+          <img class="generic-svg clickable-svg" style="border-radius: 100%;" height="28px" width="28px" src="https://avatars.githubusercontent.com/u/78726437?s=96&v=4" alt="Dev's GitHub (Image)">
         </a>
         
         <h1 class="page-title">CV Generator</h1>
@@ -150,28 +150,41 @@
 
       <main class="sidebar-main-section">
         
+        <h3 class="sidebar-category-title">Personal Info</h3>
+        <p>Name</p>
+        <input type="text" class="buttons-h-container-div" id="name-input" placeholder="Your Name">
+        <p>Surname</p>
+        <input type="text" class="buttons-h-container-div" id="surname-input" placeholder="Your Surname">
+
+        <p>Birth Date</p>
+        <input type="date" class="buttons-h-container-div" id="birthdate-input">
+
         <h3 class="sidebar-category-title">Colors</h3>
         <p>Primary Color</p>
-        <input type="color" class="main-color-colorPicker" id="main-color-colorPicker" value="#42a4d5">
-        <button class="generate-button" onclick="resetColor('primary')" title="Reset primary color">
-          Reset
-        </button>
+        <div class="buttons-h-container-div" style="gap: 0;">
+          <input type="color" class="main-color-colorPicker" id="main-color-colorPicker" value="#42a4d5" title="Primary Color">
+          <button class="generate-button" onclick="resetColor('primary')" title="Reset primary color">
+            Reset
+          </button>
+        </div>
 
         <p>Text Primary Color</p>
-        <input type="color" class="text-main-color-colorPicker" id="text-main-color-colorPicker" value="#6dbde5">
-        <button class="generate-button" onclick="resetColor('text-primary')" title="Reset text primary color">
-          Reset
-        </button>
+        <div class="buttons-h-container-div" style="gap: 0;">
+          <input type="color" class="text-main-color-colorPicker" id="text-main-color-colorPicker" value="#6dbde5" title="Text Primary Color">
+          <button class="generate-button" onclick="resetColor('text-primary')" title="Reset text primary color">
+            Reset
+          </button>
+        </div>
         
         <p>Background Luminosity</p>
         <div class="buttons-h-container-div">
           
-          <input class="slider" type="range" min="0" max="100" value="16" step="1" id="bg-luminosity-slider" style="flex: 50%;">
+          <input class="slider" type="range" min="0" max="100" value="16" step="1" id="bg-luminosity-slider" style="flex: 50%;" title="Background Luminosity Slider">
           <svg class="generic-svg" fill="#ffffff" width="28px" height="28px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon" data-darkreader-inline-fill="" style="--darkreader-inline-fill: var(--darkreader-background-ffffff, #181a1b);"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M656 200h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm58 624h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM192 650h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 174h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm696-696h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 174h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 174h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 174h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 174h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm-348 0h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm-174 0h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm174-696H358c-127 0-230 103-230 230v182c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8V358c0-87.3 70.7-158 158-158h182c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8z"></path> </g></svg>
           
           <div class="slider-input-container">
             
-            <button class="button_left" onclick="addBGLuminosityAmount(-1)" title="Add luminosity (-1)">
+            <button class="button_left" onclick="addBGLuminosityAmount(-1)" title="Subtract luminosity (-1)">
               -
             </button>
             
@@ -179,39 +192,80 @@
               +
             </button>
 
-            <input type="text" class="pfp-border-radius-slider-text" id="bg-luminosity-slider-text" value="16">
+            <input type="text" class="pfp-border-radius-slider-text" id="bg-luminosity-slider-text" value="16" title="Background Luminosity Value Input">
               
             </input>
 
           </div>
           
         </div>
-        
+
         <h3 class="sidebar-category-title">Personal Image</h3>
         
+        <p>Roundness</p>
         <div class="buttons-h-container-div">
           
           <svg class="generic-svg" fill="#ffffff" width="28px" height="28px" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg" id="memory-border-top-left" data-darkreader-inline-fill="" style="--darkreader-inline-fill: var(--darkreader-background-ffffff, #181a1b);"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M18 10H20V12H18V10M10 18H12V20H10V18M6 18H8V20H6V18M18 6H20V8H18V6M14 18H16V20H14V18M18 18H20V20H18V18M18 14H20V16H18V14M2 2H20V4H4V20H2V2Z"></path></g></svg>
-          <input class="slider" type="range" min="0" max="100" value="0" step="1" id="pfp-border-radius-slider" style="flex: 50%;">
+          <input class="slider" type="range" min="0" max="100" value="0" step="1" id="pfp-border-radius-slider" style="flex: 50%;" title="Profile Picture Roundness Slider">
           <svg class="generic-svg" fill="#ffffff" width="28px" height="28px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon" data-darkreader-inline-fill="" style="--darkreader-inline-fill: var(--darkreader-background-ffffff, #181a1b);"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M656 200h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm58 624h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM192 650h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 174h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm696-696h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 174h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 174h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 174h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 174h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm-348 0h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm-174 0h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm174-696H358c-127 0-230 103-230 230v182c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8V358c0-87.3 70.7-158 158-158h182c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8z"></path> </g></svg>
           
           <div class="slider-input-container">
             
-            <button class="button_left" onclick="addPfpBorderRadiusAmount(-1)" title="Add luminosity (-1)">
+            <button class="button_left" onclick="addPfpBorderRadiusAmount(-1)" title="Add Roundness (-1)">
               -
             </button>
             
-            <button onclick="addPfpBorderRadiusAmount(+1)" title="Add luminosity (+1)">
+            <button onclick="addPfpBorderRadiusAmount(+1)" title="Add Roundness (+1)">
               +
             </button>
 
-            <input type="text" class="pfp-border-radius-slider-text" id="pfp-border-radius-slider-text" value="0">
+            <input type="text" class="pfp-border-radius-slider-text" id="pfp-border-radius-slider-text" value="0" title="Profile Picture Roundness Value Input">
               
             </input>
 
           </div>
           
         </div>
+
+        <p>Shadow Color</p>
+        <div class="buttons-h-container-div" style="gap: 0;">
+          
+          <input type="color" class="pfp-shadow-color-colorPicker" id="pfp-shadow-color-colorPicker" value="#000000"  title="Profile Picture Shadow Color">
+          <button class="generate-button" onclick="resetColor('pfp-shadow-color')" title="Reset pfp shadow color">
+            Reset
+          </button>
+        
+        </div>
+        
+        <p>Shadow Blur</p>
+        <div class="buttons-h-container-div">
+          <input type="range" min="0" max="100" value="32" class="slider" id="pfp-shadow-blur-slider" title="Profile Picture Shadow Blur Slider">
+          <div class="slider-input-container">
+            <button class="button_left" onclick="addPfpShadowBlurAmount(-1)" title="Add Shadow Blur (-1)">
+              -
+            </button>
+            <button onclick="addPfpShadowBlurAmount(+1)" title="Add Shadow Blur (+1)">
+              +
+            </button>
+            <input type="text" class="pfp-border-radius-slider-text" id="pfp-shadow-blur-slider-text" value="32" title="Profile Picture Shadow Blur Value Input">
+          </div>
+        </div>
+
+        <p>Shadow Spread</p>
+        <div class="buttons-h-container-div">
+          <input type="range" min="0" max="100" value="0" class="slider" id="pfp-shadow-spread-slider" title="Profile Picture Shadow Spread Slider">
+          <div class="slider-input-container">
+            <button class="button_left" onclick="addPfpShadowSpreadAmount(-1)" title="Add Shadow Spread (-1)">
+              -
+            </button>
+            <button onclick="addPfpShadowSpreadAmount(+1)" title="Add Shadow Spread (+1)">
+              +
+            </button>
+            <input type="text" class="pfp-border-radius-slider-text" id="pfp-shadow-spread-slider-text" value="0" title="Profile Picture Shadow Spread Value Input">
+          </div>
+        </div>
+
+        <h3 class="sidebar-category-title">ᅠ</h3>
 
       </main>
 
@@ -242,7 +296,7 @@
     </sidebar>
   
     <div class="generic-loading-overlay noPrint" id="generic-loading-overlay">
-      <img src="imgs/379.gif" style="width: -webkit-fill-available;height: -webkit-fill-available;object-fit: scale-down;">
+      <img src="imgs/379.gif" style="width: -webkit-fill-available;height: -webkit-fill-available;object-fit: scale-down;" alt="Loading Image">
     </div>
 
   <script src="script.js"></script>
